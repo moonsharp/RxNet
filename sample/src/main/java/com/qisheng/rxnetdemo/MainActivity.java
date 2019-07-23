@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 RetrofitFactory.cancel(mDownloadTask);
+                Toast.makeText(MainActivity.this, "停止下载", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
             public void onStart(Disposable d) {
                 mDownloadTask = d;
                 LogUtils.d("onStart " + d);
+                Toast.makeText(MainActivity.this, "开始下载", Toast.LENGTH_SHORT).show();
             }
 
             @Override
