@@ -1,7 +1,7 @@
 # RxNet
 对Retrofit+RxJava+OKHttp的进一步封装，该网络框架目前实现了下载功能。
 
-![show](/RxNet-download.gif)
+![show](/show-download.gif)
 
 ## 下载特性
 1. 进度回调
