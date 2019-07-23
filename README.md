@@ -6,16 +6,18 @@
 2. 断点续传
 
 ## 如何使用
-1. log开关
-``
+
+### log开关
+
+```
 RxNet.enableLog = true;
-``
+```
 
-2. 下载调用
+### 下载调用
 
-``
-String path = getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath() + File.separator + "weather.apk";
-RxNet.download(url, path, new DownloadCallback() {
+```
+    String path = getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath() + File.separator + "weather.apk";
+    RxNet.download(url, path, new DownloadCallback() {
         @Override
         public void onStart(Disposable d) {
             LogUtils.d("onStart");
@@ -35,4 +37,4 @@ RxNet.download(url, path, new DownloadCallback() {
         public void onError(String msg) {
             LogUtils.d("onError " + msg);
         }
-  ``
+```
